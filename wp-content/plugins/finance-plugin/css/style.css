@@ -1,0 +1,34 @@
+.investor-area {
+    min-height: 500px;
+}
+
+.investor-area {
+    position: relative;
+}
+
+.investor-area.loading:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.96) url(../assets/img/loader.svg) center 240px no-repeat;
+    background-size: 100px auto;
+    z-index: 1000;
+}
+
+#login-form.loading {
+    position: relative;
+}
+#login-form.loading:before {
+    content: '';
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8) url(../assets/img/loader.svg) center center no-repeat;
+    background-size: 100px auto;
+}

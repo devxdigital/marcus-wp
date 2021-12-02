@@ -1,0 +1,127 @@
+
+.nsof-tab-pane {display: none;}
+
+
+/*======== Tabs Top/Default Mode ===================*/
+
+/*----- Tabs -----*/
+.nsof-tabs {
+    width:100%;
+    display:inline-block;
+}
+
+    /*----- Tab Links -----*/
+
+    .tab-links {
+        border-bottom: 1px solid #D0D0D0;
+    }
+
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+
+    .tab-links div {
+        margin: 0 3px 0 0;
+        float:left;
+    }
+
+        .tab-links a {
+            width: 100%;
+            padding: 10px 15px;
+            display:inline-block;
+            font-size:14px;
+            color:#545454;
+            // font-weight: 600;
+            background: #FBFBFB;
+            border: 1px solid #ddd;
+            margin-bottom: -1px;
+            text-decoration: none;
+            transition:all linear 0.15s;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+            .tab-links .group-child a{font-weight: normal;}
+
+        .nsof-tabs .tab-links div:not(.group-name) a:hover {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+            text-decoration:none;
+        }
+
+    .nsof-tabs .tab-links .active a,
+    .nsof-tabs .tab-links .active a:hover {
+        background: #fff;font-weight: 600;
+        border-bottom: 1px solid #fff;
+        color:#444;
+    }
+
+
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-top: 0;
+    }
+
+        .tab {
+            display:none;
+        }
+
+        .tab.active {
+            display:block;
+        }
+
+
+
+/*======== Tabs Left Mode ===================*/
+
+.tabs-left{
+    position: relative;
+}
+.nsof-tab-pane.active{display: block;}
+
+/*----- Tab Links -----*/
+
+.tabs-left > .tab-links{
+    float: left;
+    width: 200px;
+}
+
+    .tabs-left > .tab-links div{width: 100%;}
+
+    .tabs-left > .tab-links .group-child{
+        display: none;
+    }
+
+
+    .tabs-left > .tab-links .group-name:last-child{border-bottom: 0;}
+
+        .tabs-left > .tab-links .group-name a{
+            background: #E2E2E2;
+            padding: 15px;
+            color: #444;
+        }
+
+    .tabs-left > .tab-links div:not(.group-name) a:hover{
+        border-bottom: 1px solid #D0D0D0;
+    }
+
+    .tabs-left > .tab-links .active a,
+    .tabs-left > .tab-links .active a:hover {
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #D0D0D0;
+    }
+
+
+/*----- Content of Tabs -----*/
+.tabs-left > .tab-content{
+    margin-left: 199px;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+}

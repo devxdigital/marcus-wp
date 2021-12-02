@@ -1,0 +1,11 @@
+.nsof-form .nsof-field input[type="text"].nsof-input-measurement {
+  float: left;
+  margin: 0;
+  max-width: 58px;
+  height: 28px;
+  vertical-align: middle;
+}
+
+.nsof-measurement-select-unit{
+	margin: 0;
+}

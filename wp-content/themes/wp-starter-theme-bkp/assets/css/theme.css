@@ -1,0 +1,793 @@
+/**
+ * This is the theme css file. Use it only for styling the theme!!
+ */
+
+/*>>>>>>>>>>>> TABLE OF CONTENTS <<<<<<<<<<<<<<
+TYPOGRAPHY
+GENERAL
+HEADER
+CONTENT
+SIDEBAR
+FOOTER
+AUTHOR
+COMMENTS
+BREADCRUMBS
+PAGINATION
+FORM_FIELDS
+DEFAULT_BUTTONS
+SIDE_MENUS
+
+--Util Classes--
+MISC
+TEXT
+BUTTONS
+BORDER_RADIUS
+>>>>>>>>>>>>>> TABLE OF CONTENTS <<<<<<<<<<<<<<*/
+
+
+
+/*===================== TYPOGRAPHY ===========================================*/
+
+    *{outline: none;}
+
+    html {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    html, body{
+        overflow-x: hidden;
+    }
+
+
+    body{
+        font-size: 16px;
+        line-height: 1.5em;
+        color: #6F6E6E;
+        background: #ECECEC;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        min-height: 100%;
+        position: relative;
+    }
+
+
+    h1,h2,h3,h4,h5,h6{
+        line-height: 1.1em;
+        font-weight: 300;
+        margin: 0.8em auto 0.5em;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 18px;
+    }
+    h5{
+        font-size: 16px;
+    }
+    h6{
+        font-size: 14px;
+    }
+
+
+
+    a{
+        font-size: inherit;
+        color: #278ECC;
+    }
+
+    a:hover,
+    a:active{
+        color: #47a3da;
+        text-decoration: none;
+    }
+
+    /* unvisited link */
+    a:link{}
+
+    /* visited link */
+    a:visited{}
+
+
+    ul,
+    ol{
+        margin: 0 0 20px;
+        padding-left: 20px;
+    }
+
+    p{
+        margin: 0 0 20px;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    blockquote{
+        background-color: #e6e6e6;
+        padding: 15px;
+        border: 1px solid #ddd;
+        margin: 10px;
+    }
+        blockquote p:last-child{margin-bottom: 0;}
+
+    pre{
+        background-color: #e6e6e6;
+        padding: 15px;
+        border: 1px solid #ddd;
+        margin: 10px 0 20px;
+    }
+
+
+
+    table{}
+
+        tr{
+            background-color: #e6e6e6;
+            border-top: 1px solid #ddd;
+        }
+        tr:first-child{
+            border-top: 0;
+        }
+
+            th,
+            td{
+                padding: 10px;
+                text-align: left;
+                vertical-align: middle;
+            }
+
+            th{
+                background-color: #ddd;
+            }
+
+
+/*===================== GENERAL ==============================================*/
+    @media(min-width: 992px){
+
+        .col-to-right{
+            float: right;
+        }
+    }
+
+
+
+/*===================== HEADER ===============================================*/
+
+    .header{
+        width: 100%;
+        background: #47a3da;
+    }
+
+    .header_sticky .header{
+        position: fixed;
+        z-index: 200;
+        left: auto;
+        top: auto;
+    }
+    .header_sticky #content{
+        margin-top: 60px;
+    }
+
+        .header__logo{
+            float: left;
+            font-size: 18px;
+            display: inline-block;
+        }
+            .header__logo,
+            .header__logo:hover,
+            .header__logo:active{color: #fff;}
+
+        .header__logo img{
+            /*max-width: 200px;*/
+        }
+
+
+
+        .header__navigation {
+            text-align: right;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+            .header__menu{
+                padding: 0;
+                margin: 0;
+            }
+
+            .header__navigation li {
+                display: inline-block;
+                text-align: left;
+                list-style: none;
+                position: relative;
+                margin-left: 1px;
+            }
+
+            .header__navigation li.current-menu-item a,
+            .header__navigation li a:hover{
+                background: #278ECC;
+            }
+
+            .header__navigation li.menu-item-has-children > a:before{
+                display: table;
+                font: normal normal normal 14px/1 FontAwesome;
+                content: "\f107";
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                margin-top: -7px;
+                color: inherit;
+                background: transparent;
+            }
+
+                .header__navigation li a{
+                    color: #fff;
+                    display: block;
+                    padding: 0 20px;
+                    line-height: 60px;
+                    font-size: 15px;
+                    transition: all 0.3s ease;
+                }
+
+                .header__navigation li .sub-menu{
+                    visibility: hidden;
+                    position: absolute;
+                    width: 200px;
+                    z-index: 9999;
+                    top: auto;
+                    left: 0;
+                    padding: 0;
+                }
+
+                    .header__navigation li .sub-menu{
+                        background: #47a3da;
+                    }
+                    .header__navigation li .sub-menu li a{
+                        border-top: 1px solid #278ECC;
+                    }
+
+                    .header__navigation li .sub-menu.pull-to-left{
+                        left: auto;
+                        right: 0;
+                    }
+
+                    .header__navigation li .sub-menu.pull-to-left li > ul{right: 100%;}
+
+                .header__navigation li .sub-menu li{
+                    width: 100%;
+                    margin: 0;
+                }
+                    .header__navigation li .sub-menu li a{
+                        font-size: 15px;
+                        line-height: 20px;
+                        padding: 10px 20px;
+                    }
+
+                .header__navigation li .sub-menu li > ul{left: 100%;top: 0;}
+
+                    .header__navigation li .sub-menu li > ul li a{border: 0px;}
+
+
+
+            .showSideMenu{
+                color: #fff;
+                font-size: 25px;
+                line-height: 60px;
+                background: none;
+                border: 0;
+                padding: 0;
+                width: 60px;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+
+/*===================== CONTENT ==============================================*/
+
+    .content{
+        margin-top: 85px;
+        margin-bottom: 100px; /* this is the equal with the footer height*/
+    }
+
+        .content__row{
+            margin-bottom: 30px;
+        }
+
+            .content__title{
+                margin: 0 0 10px;
+            }
+
+            .content__meta{
+                font-style: italic;
+                margin-bottom: 10px;
+            }
+
+            .content__text{}
+
+            .content__tags{}
+
+
+/*===================== SIDEBAR ==============================================*/
+
+    .sidebar_widget{
+        margin-bottom: 30px;
+    }
+
+        .sidebar__title {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+        .sidebar_widget ul {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+/*===================== FOOTER ===============================================*/
+
+    .footer{
+        background-color: #ddd;
+        padding: 15px 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+        .footer__copyright{
+            font-size: 13px;
+        }
+
+
+/*===================== AUTHOR ===============================================*/
+    .author-bio{
+        margin-bottom: 15px;
+        min-height: 130px;
+    }
+        .author-bio > img{float: left;margin-right: 10px;}
+
+
+/*===================== COMMENTS =============================================*/
+
+    .comments{
+        clear: both;
+        width: 100%;
+        padding: 20px 0;
+    }
+        .comments__title{
+            margin: 0 0 20px;
+            font-size: 18px;
+        }
+
+        .comment{}
+
+            .comment__wrapper {
+                position: relative;
+                overflow: hidden;
+                margin-bottom: 20px;
+            }
+
+                .comment__head{
+                    float: left;
+                    width: 67px;
+                    margin: 0 5px 0 0;
+                }
+
+                    .comment__reply a{
+                        display: inline-block;
+                        border: 1px solid #47a3da;
+                        color: #47a3da;
+                        padding: 3px 7px;
+                        font-size: 12px;
+                    }
+
+
+                .comment-entry {
+                    padding: 15px 15px 10px;
+                    background: #F7F7F7;
+                    border: 1px solid #E4E4E4;
+                    overflow: hidden;
+                }
+
+                    .comment__meta{}
+
+                        .comment__date,
+                        .comment__edit,
+                        .comment__perma {
+                            color: #999;
+                            font-style: italic;
+                            font-size: 12px;
+                        }
+
+
+    #comment-box{position: relative;}
+
+        #ns-user-profile-avatar{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .comment-respond{margin-left: 67px;}
+
+
+    .commentlist{padding-left: 0;}
+    .commentlist .children{padding: 0 0 0 20px;}
+
+
+/*===================== BREADCRUMBS ==========================================*/
+
+    .breadcrumbs{
+        margin-bottom: 10px;
+    }
+
+        .breadcrumbs__menu{
+            padding: 0;
+            margin: 0 0 7px;
+            list-style: none;
+        }
+            .breadcrumbs__menu li{
+                display: inline-block;
+            }
+
+            .breadcrumbs__menu > li + li:before {
+                content: "/\00a0";
+                padding: 0 5px;
+                color: #ccc;
+            }
+
+
+/*===================== PAGINATION ===========================================*/
+
+    .pagination .page-numbers{
+        display: inline-block;
+        padding: 0 15px;
+        margin: 20px 0;
+        clear: both;
+        width: 100%;
+        text-align: center;
+    }
+
+        .pagination .page-numbers li{
+            list-style: none;
+            display: inline-block;
+        }
+
+            .pagination .page-numbers a,
+            .pagination .page-numbers span{
+                color: #fff;
+                display: inline-block;
+                padding: 7px 15px;
+                font-size: 13px;
+                background: #47a3da;
+            }
+
+            .pagination .page-numbers a:hover,
+            .pagination .page-numbers span{
+                background: #278ECC;
+            }
+
+
+/*===================== FORM_FIELDS ==========================================*/
+
+    .search-form .search-submit{
+        display: none;
+    }
+
+    label{font-weight: 400; cursor: pointer;}
+
+    select,
+    textarea,
+    input:not(*[type="radio"]):not(*[type="checkbox"]):not(*[type="submit"]){
+        display: inline-block;
+        width: 100%;
+        height: 35px;
+        padding: 6px 12px;
+        font-size: 15px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    }
+
+        select:focus,
+        textarea:focus,
+        input:not(*[type="radio"]):not(*[type="checkbox"]):not(*[type="submit"]):focus {
+            outline: 0;
+            border-color: #47a3da;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+        }
+
+    textarea{min-height: 80px;}
+
+
+/*===================== DEFAULT_BUTTONS ======================================*/
+
+    .btn,
+    button,
+    input[type="button"],
+    input[type="submit"]{
+        color: #fff;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: normal;
+        text-align: center;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-color: #47a3da;
+        border: 0;
+        white-space: nowrap;
+        padding: 10px 15px;
+        font-size: 15px;
+        line-height: 1.5em;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        transition: all 0.3s ease;
+    }
+
+        .btn:active,
+        button:active,
+        input[type="button"]:active,
+        input[type="submit"]:active{
+            outline: 0;
+        }
+
+        .btn:hover,
+        button:hover,
+        input[type="button"]:hover,
+        input[type="submit"]:hover{
+            background-color: #278ECC;
+        }
+
+
+/*===================== SIDE_MENUS ===========================================*/
+
+    .sdm-menu {
+        position: fixed;
+        overflow-y: auto;
+        background: #47a3da;
+        overflow-x: hidden;
+    }
+        .sdm-menu h3 {
+            padding: 20px 20px;
+            margin: 0;
+            font-weight: 300;
+            background: #278ECC;
+        }
+
+        .sdm-menu a {
+            display: block;
+            font-size: 1.1em;
+            font-weight: 300;
+            background: #47a3da;
+        }
+
+            .sdm-menu a:hover,
+            .sdm-menu a:active {background: #258ecd;}
+
+        .sdm-menu h3, .sdm-menu a {color: #fff;}
+
+    /* Orientation-dependent styles for the content of the menu */
+
+    .sdm-menu-vertical {
+        width: 240px;
+        height: 100%;
+        top: auto;
+        z-index: 1000;
+    }
+
+    .sdm-menu-vertical a {
+        padding: 1em;
+        border-bottom: 1px solid #258ecd;
+    }
+
+    .sdm-menu-horizontal {
+        width: 100%;
+        height: 150px;
+        left: 0;
+        z-index: 1000;
+        overflow: hidden;
+    }
+
+    .sdm-menu-horizontal h3 {
+        height: 100%;
+        width: 20%;
+        float: left;
+    }
+
+    .sdm-menu-horizontal a {
+        float: left;
+        width: 20%;
+        padding: 0.8em;
+        border-bottom: 1px solid #258ecd;
+    }
+
+    /* Vertical menu that slides from the left or right */
+
+    .sdm-menu-left {
+        left: -240px;
+    }
+
+    .sdm-menu-right {
+        right: -240px;
+    }
+
+    .sdm-menu-left.sdm-menu-open {
+        left: 0px;
+    }
+
+    .sdm-menu-right.sdm-menu-open {
+        right: 0px;
+    }
+
+    /* Horizontal menu that slides from the top or bottom */
+
+    .sdm-menu-top {
+        top: -150px;
+    }
+
+    .sdm-menu-bottom {
+        bottom: -150px;
+    }
+
+    .sdm-menu-top.sdm-menu-open {
+        top: 0px;
+    }
+
+    .sdm-menu-bottom.sdm-menu-open {
+        bottom: 0px;
+    }
+
+    /* Push classes applied to the body */
+
+    .sdm-menu-push {
+        overflow-x: hidden;
+        position: relative;
+        left: 0;
+    }
+
+    .push-from-left {
+        left: 240px;
+    }
+
+    .push-from-right {
+        left: -240px;
+    }
+
+    /* Transitions */
+
+    .sdm-menu,
+    .sdm-menu-push {
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+
+
+
+/*--------------------- Util Classes -----------------------------------------*/
+
+
+/*===================== MISC =================================================*/
+
+    .clear{clear: both;}
+
+
+    .display-table{
+        display: table;
+        width: 100%;
+        height: 100%;
+    }
+        .table-cell{
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+
+    .eq-col{
+        margin-bottom: -99999px;
+        padding-bottom: 99999px;
+    }
+
+
+/*===================== TEXT =================================================*/
+
+    .txt--align-left{
+        text-align: left;
+    }
+    .txt--align-right{
+        text-align: right;
+    }
+    .txt--align-center{
+        text-align: center;
+    }
+    .txt--align-justify{
+        text-align: justify;
+    }
+
+
+    .txt--uppercase{
+        text-transform: uppercase;
+    }
+    .txt--lowercase{
+        text-transform: lowercase;
+    }
+
+
+    .txt--letterspacing-small{
+        letter-spacing: 1px;
+    }
+    .txt--letterspacing-medium{
+        letter-spacing: 2px;
+    }
+    .txt--letterspacing-large{
+        letter-spacing: 4px;
+    }
+
+
+/*===================== BUTTONS ==============================================*/
+
+    .btn--size-small{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .btn--size-medium{
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .btn--size-large{
+        font-size: 25px;
+        padding: 15px 30px;
+    }
+
+
+    .btn--bg-darkred{
+        background-color: #9A0000;
+    }
+
+
+/*===================== BORDER_RADIUS ========================================*/
+
+    .bdr--radius-small{
+        border-radius: 3px;
+    }
+    .bdr--radius-medium{
+        border-radius: 6px;
+    }
+    .bdr--radius-large{
+        border-radius: 10px;
+    }
+
+
+.inner-page {
+    background-color: #E7E7E7;
+    padding: 20px 20px 50px 20px;
+}

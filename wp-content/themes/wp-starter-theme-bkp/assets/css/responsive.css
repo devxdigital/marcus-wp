@@ -1,0 +1,33 @@
+/* make header sticky only on desktop */
+@media(min-width: 1025px){
+    .header_sticky_on_desktop .header{
+        position: fixed;
+        z-index: 200;
+        left: auto;
+        top: auto;
+    }
+    .header_sticky_on_desktop .content{
+        margin-top: 90px;
+    }
+}
+
+/* make header sticky only on small devices */
+@media(max-width: 1024px){
+    .header_sticky_on_small_devices .header{
+        position: fixed;
+        z-index: 200;
+        left: auto;
+        top: auto;
+    }
+    .header_sticky_on_small_devices .content{
+        margin-top: 90px;
+    }
+}
+/* make header sticky only on small devices */
+@media(max-width: 991px){
+    header .navbar {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+}
