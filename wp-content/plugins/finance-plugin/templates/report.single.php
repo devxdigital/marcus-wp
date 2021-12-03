@@ -66,23 +66,23 @@ if( $sdate && $edate ){
                         <tbody>
                             <tr>
                                 <td> Beginning Invested Principal Balance <span data-bs-toggle="tooltip" data-bs-placement="right" title="Beginning Invested Principal Balance is the principal amount invested in all loans as of the 1st date from the date range selected."><i class="fal fa-question-circle"></i></span></td>
-                                <td class="right"><strong><?php echo FinancePluginHelper::currency( $statements['info']['beginningInvestedPrincipal'] ); ?></strong></td>
+                                <td class="right value"><strong><?php echo FinancePluginHelper::currency( $statements['info']['beginningInvestedPrincipal'] ); ?></strong></td>
                             </tr>
                             <tr>
                                 <td>Principal Pay Downs/Payoffs on Loans <span data-bs-toggle="tooltip" data-bs-placement="right" title="Principal Held in Trust Pending Investment Funding is the principal amount committed and awaiting funding/recording as of the last date of the date range selected."><i class="fal fa-question-circle"></i></span></td>
-                                <td class="right"><strong><?php echo FinancePluginHelper::currency( $statements['info']['totalPayoffs'] ); ?></strong></td>
+                                <td class="right value"><strong><?php echo FinancePluginHelper::currency( $statements['info']['totalPayoffs'] ); ?></strong></td>
                             </tr>
                             <tr>
                                 <td>Principal Invested/Funded on Loans <span data-bs-toggle="tooltip" data-bs-placement="right" title="Principal Pay Downs/Payoffs on Loans is the princiapl amount paid back for the date range selected."><i class="fal fa-question-circle"></i></span></td>
-                                <td class="right"><strong><?php echo FinancePluginHelper::currency( $statements['info']['principalInvested'] ); ?></strong></td>
+                                <td class="right value"><strong><?php echo FinancePluginHelper::currency( $statements['info']['principalInvested'] ); ?></strong></td>
                             </tr>
                             <tr>
                                 <td>Ending Invested Principal Balance <span data-bs-toggle="tooltip" data-bs-placement="right" title="Principal Not Reinvested from Pay Downs/Payoffs is the principal amount since becoming an investor at Ignite Funding that was at one-time invested and is no longer invested.)"><i class="fal fa-question-circle"></i></span></td>
-                                <td class="right"><strong><?php echo FinancePluginHelper::currency( $statements['info']['endingInvestedPrincipal'] ); ?></strong></td>
+                                <td class="right value"><strong><?php echo FinancePluginHelper::currency( $statements['info']['endingInvestedPrincipal'] ); ?></strong></td>
                             </tr>
                             <tr>
                                 <td>&nbsp;</td>
-                                <td class="right"><strong>&nbsp;</strong></td>
+                                <td class="right value"><strong>&nbsp;</strong></td>
                             </tr>
                         </tbody>
                     </table>
@@ -110,29 +110,29 @@ if( $sdate && $edate ){
                         <tbody>
                             <tr>
                                 <td>Interest Paid This Month <span data-bs-toggle="tooltip" data-bs-placement="right" title="Ending Invested Principal Balance is the principal amount invested as of the last date of the date range selected."><i class="fal fa-question-circle"></i></span></td>
-                                <td class="right"><strong><?php echo FinancePluginHelper::currency( $statements['info']['interestPaid'] ); ?></strong></td>
+                                <td class="right value"><strong><?php echo FinancePluginHelper::currency( $statements['info']['interestPaid'] ); ?></strong></td>
                             </tr>
                             <tr>
                                 <td>Interest Earned Life to Date <span data-bs-toggle="tooltip" data-bs-placement="right" title="Interest Earned Life to Date is the amount of interest earned since becoming an investor at Ignite Funding on principal invested/funded on loans."><i class="fal fa-question-circle"></i></span></td>
-                                <td class="right"><strong><?php echo FinancePluginHelper::currency( $statements['info']['InterestEarnedLTD'] ); ?></strong></td>
+                                <td class="right value"><strong><?php echo FinancePluginHelper::currency( $statements['info']['InterestEarnedLTD'] ); ?></strong></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="charts row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 return-chart">
+                        <div class="chart-head">
+                            <h5>Investment Returns</h5>
+                            <p class="card-text fine-print f12 fw-400 mb-3">Oct 1 - Oct 31, 2020</p>
+                        </div>
+                        <div class="chart"></div>
+                    </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 investment-chart">
                         <div class="chart-head">
                             <h5>Investment Diversity</h5>
                             <p class="card-text fine-print f12 fw-400 mb-3">Oct 1 - Oct 31, 2020</p>
                         </div>
                         <canvas id="diversity_chart" width="400" height="400"></canvas>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 return-chart">
-                        <div class="chart-head">
-                            <h5>Investment Returns</h5>
-                            <p class="card-text fine-print f12 fw-400 mb-3">Oct 1 - Oct 31, 2020</p>
-                        </div>
-                        <div class="chart"></div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 borrowers-table table-responsive">
                         <table class="table table-borderless">

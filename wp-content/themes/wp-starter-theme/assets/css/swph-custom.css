@@ -1951,3 +1951,102 @@ table.dataTable>thead .sorting:after, table.dataTable>thead .sorting_asc:after, 
 
 
 /* extra updates */
+
+@media (max-width: 991px) {
+    .new-account .raport #home-tab {
+        border-right: 0;
+    }
+    .new-account .raport table {
+        border-right: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .new-account .table-responsive {
+        padding: 4.5rem 1rem;
+    } 
+    .new-account .tax-information-boxes {
+        min-height: 70px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .new-custom-navbar.secondary-menu.navbar-expand-lg {
+        padding-top: 0.70rem;
+    }
+    .new-custom-navbar.secondary-menu.navbar-expand-lg .navbar-nav {
+        justify-content: space-between;
+        padding-left: 18px;
+        max-width: 65%;
+        
+    }
+    .new-custom-navbar.secondary-menu.navbar-expand-lg .navbar-nav.log-status {
+        max-width: 100%;
+        text-align: right;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    .new-account .tpl-home .summary.accounts .card-body h3 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .new-account .tpl-home .summary.accounts .card-body .card-text.fine-print {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .new-account .card .summary.accounts .card {
+        box-shadow: none;
+    }
+}
+
+.new-account .tpl-home .summary.accounts {
+    margin-left: unset;
+    margin-right: unset;
+}
+
+.new-account .card {
+    border: none;
+}
+
+.new-account.page-template-page-account-detail .calendar .top-box {
+    border-right: none;
+}
+
+.new-account.page-template-page-account-detail .calendar,
+.new-account .raport {
+    border-left: 1px solid #D5D5D5;
+    border-right: 1px solid #D5D5D5;
+}
+
+.new-account .raport table:last-of-type  {
+    border-right: none;
+}
+
+.new-account .raport .right.value {
+    font-size: 14px;
+}
+
+.new-account .chart-head h5 {
+    margin-bottom: 0;
+}
+
+.new-account .return-chart {
+    border-bottom: 1px solid #D5D5D5;
+}
+
+.new-account .card-footer {
+    border-top: 2px solid #D5D5D5;
+    border-left: 1px solid #D5D5D5;
+    border-right: 1px solid #D5D5D5;
+    border-bottom: 1px solid #D5D5D5;
+}
+
+.new-account .card-footer:last-child {
+    border-radius: 0;
+}
+
+.new-account .raport #myTab,
+.new-account .nav-tabs {
+    border-bottom: 0;
+}

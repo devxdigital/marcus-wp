@@ -21,7 +21,7 @@ if( empty( $investor_data ) || count( $investor_data ) == 0 ){
 ?>
 
 <div class="col" style="--bs-gutter-x:0;">
-    <nav class="navbar navbar-expand-lg navbar-dark secondary-menu">
+    <nav class="navbar navbar-expand-lg navbar-dark secondary-menu new-custom-navbar">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -84,18 +84,20 @@ if( empty( $investor_data ) || count( $investor_data ) == 0 ){
                 </ul>
                 <?php if (is_user_logged_in()) : ?>
                     <div class="d-flex">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav log-status me-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="<?php echo wp_logout_url(home_url('/')); ?>" style="color: #67A102">Log Out</a></li>
                         </ul>
                     </div>
                 <?php else: ?>
                     <div class="d-flex">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav log-status me-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="<?php echo wp_logout_url(home_url('/wp-admin')); ?>" style="color: #67A102">Login</a></li>
                         </ul>
                     </div>
                 <?php endif; ?>
             </div>
+        
+        
         </div>
     </div>
 </div>
