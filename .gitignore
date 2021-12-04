@@ -1,0 +1,12 @@
+/*
+!wp-content
+!.gitignore
+wp-content/*
+
+!wp-content/plugins
+wp-content/plugins/*
+!wp-plugins/plugins/finance-plugin
+
+!wp-content/themes
+wp-content/themes/*
+!wp-content/themes/wp-starter-theme
